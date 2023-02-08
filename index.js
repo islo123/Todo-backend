@@ -7,7 +7,8 @@ const cors = require("cors");
 
 require('dotenv').config()
 
-app.use(cors());
+app.use(cors({origin: 'https://todo2-app.onrender.com', 'methods': 'GET,PUT,PATCH,POST,DELETE'})) // Pitä olla security syyistä...frontendin tule error jos ei ole tämä
+
 
 app.use(express.json())
 
